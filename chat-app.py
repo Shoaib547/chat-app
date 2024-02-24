@@ -45,8 +45,12 @@ if submit and input:
         full_res += chunk.text
     st.write(full_res)
     st.session_state['chat_history'].append(('Bot 🤖', full_res))
-    
+
+st.markdown("---")
 st.subheader("Chat History:")
 
 for role, text in st.session_state['chat_history']:
     st.write(f"{role}: {text}")
+
+st.markdown("---")
+st.markdown("Created by Shoaib")
